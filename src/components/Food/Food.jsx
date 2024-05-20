@@ -1,6 +1,7 @@
 
 
 function Food({data}) {
+  //articulo para mostrar una comida
   return (
     <article>
         <img src={data.image} alt=""/>
