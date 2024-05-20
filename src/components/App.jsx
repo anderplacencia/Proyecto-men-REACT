@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import getDataApi from "./Services/Api";
+import SearchName from "./SearchName/SearchName";
 
 
 
@@ -16,6 +17,8 @@ function App() {
   return ( 
     <div>
       <h1>Lista de comidas</h1>
+
+      <SearchName  foods={foods}/>
     </div>
   );
 }
