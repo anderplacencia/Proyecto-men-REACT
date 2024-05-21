@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../../scss/login.css'
 
 function Login ({ listUsers, setUser }) {
   const [userLogin, setUserLogin] = useState({})
@@ -25,18 +26,20 @@ function Login ({ listUsers, setUser }) {
     } /* */
   }
 
-
-
   return (
-    <form onChange={handleInput}>
-      <label htmlFor=''>Email</label>
-      <input type='text' id='email' />
-
-      <label htmlFor=''>Password</label>
-      <input type='password' id='password' />
-
-<p>email:    email 1</p>
-<p>password:    1</p>
+    <form className='loginContainer' onChange={handleInput}>
+      <div className='inputRow'>
+        <label htmlFor=''>Email</label>
+        <input type='text' id='email' />
+      </div>
+      <div className='inputRow'>
+        <label htmlFor=''>Password</label>
+        <input type='password' id='password' />
+      </div>
+      <div className='hint'>
+      <p>email: email 1</p>
+      <p>password: 1</p>
+      </div>
       <input type='submit' value='inicia sesion' onClick={handleClick} />
     </form>
   )

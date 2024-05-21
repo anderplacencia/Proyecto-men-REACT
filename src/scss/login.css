@@ -1,0 +1,36 @@
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+  
+    background-color: rgb(73, 70, 80);
+    border-radius: 25px;
+  
+    position: absolute;
+    top: 300px;
+    margin-left: 10%;
+    height: 160px;
+    width: 80%;
+    padding: 10px;
+}
+
+  
+  .inputRow {
+  
+    display: flex;
+    justify-content: right;
+    margin-right: 18%;
+    gap: 40px;
+  }
+  
+ .hint {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    font-size: 12px;
+font-style: italic;
+color: grey;
+  }
+  
