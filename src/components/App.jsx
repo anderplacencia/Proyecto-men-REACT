@@ -25,6 +25,7 @@ function App () {
       setFoods(cleanData)
     })
   }, [])
+  console.log("foods del api:", foods)
 
   //Se obtienen los datos de los usuarios una vez en --> listUsers
   useEffect(() => {
@@ -60,6 +61,10 @@ function App () {
           element={
             <AuthRoute user={user} component={<MenuManager menus={menus} foods={foods}/>} />
           }
+        />
+        <Route
+          path='/menuPlanner'
+          element={<p>Por hacer</p>}
         />
         <Route
           path='/foodSearch'

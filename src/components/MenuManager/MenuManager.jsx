@@ -2,6 +2,7 @@
 
 import { Link, Route, Routes } from 'react-router-dom'
 import MenuPlanner from './MenuPlanner'
+import '../../scss/menuManager.css'
 
 //Configurar menu como un elemento del user, cada user guarda sus menus <----------------------------------
 const MenuManager = (menus, foods) => {
@@ -29,14 +30,15 @@ const MenuManager = (menus, foods) => {
   }
 
   return (
-    <div>
-      <h1>Tus menus semanales</h1>
-      <input type='submit' onClick={handleAddClick} />
-      Añadir nuevo menu
+    <div className='menuManagerContainer'>
+      <h1 className='menuManagerTitle'>Tus menus semanales</h1>
+      <input type='submit' onClick={handleAddClick} value='Añadir nuevo menu'/>
+      
       <div>
         {menus.menus.map((item, i) => (
           <div key={i} className='menuContainer' onClick={handleMenuClick}>
-          <Link to="/profile"><h4>{item.name}</h4></Link>
+          {/* Esto hay que darle una vuelta: necesitamos ir a una ruta a la que le digamos que datos meter: los del menu escogido, quiza se pueda hacer de otra manera mas viable */}
+          <Link to="/menuPlanner"><h4 className='menuName'>{item.name}</h4></Link>
             <small>{item.id}</small>
             <div onClick={handleEditClick}>Edit</div>
             <div onClick={handleDeleteClick}>Delete</div>
