@@ -36,7 +36,7 @@ function Login ({ listUsers, setUser }) {
       <input type='password' id='password' />
 
 <p>email:    email 1</p>
-<p>password:    password 1</p>
+<p>password:    1</p>
       <input type='submit' value='inicia sesion' onClick={handleClick} />
     </form>
   )

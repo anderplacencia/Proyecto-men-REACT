@@ -1,0 +1,25 @@
+.navBarContainer {
+  display: block;
+
+  background-color: rgb(73, 70, 80);
+  border-radius: 25px;
+
+  position: absolute;
+  top: 40px;
+  margin-left: 10%;
+  height: 60px;
+  width: 80%;
+}
+
+.navBarUl {
+  position: absolute;
+
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+li {
+  font-size: 18px;
+  list-style:none;
+}

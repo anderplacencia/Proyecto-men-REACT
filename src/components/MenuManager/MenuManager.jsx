@@ -1,8 +1,7 @@
 //Se añaden contenedores de menu según los menus existentes
 
-import { Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 import MenuPlanner from './MenuPlanner'
-import Home from '../Home'
 
 //Configurar menu como un elemento del user, cada user guarda sus menus <----------------------------------
 const MenuManager = (menus, foods) => {
@@ -37,7 +36,7 @@ const MenuManager = (menus, foods) => {
       <div>
         {menus.menus.map((item, i) => (
           <div key={i} className='menuContainer' onClick={handleMenuClick}>
-            <h4>{item.name}</h4>
+          <Link to="/profile"><h4>{item.name}</h4></Link>
             <small>{item.id}</small>
             <div onClick={handleEditClick}>Edit</div>
             <div onClick={handleDeleteClick}>Delete</div>
